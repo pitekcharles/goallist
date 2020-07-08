@@ -2,8 +2,34 @@
    box-sizing: border-box; 
 }
 
+/* header styling */
+
 header h1 {
-    padding-top: 50px;
+    padding-top: 100px;
+    padding-bottom: 20px;
     text-align: center;
     background: teal;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
 }
+
+/* main styling */
+
+main {
+    margin-top: 10px;
+    text-align: center;
+}
+
+main button {
+    width: 100px;
+    margin: 20px 10px;
+}
+
+main .goalReached {
+    width: 80%;
+    border: 2px solid black;
+
+}
+
+/* footer styling */

@@ -1,0 +1,19 @@
+{
+  "name": "goallist",
+  "version": "1.0.0",
+  "description": "An app to track simple goals and encourage continued goal achievement",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pitekcharles/goallist.git"
+  },
+  "author": "Charles Pitek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pitekcharles/goallist/issues"
+  },
+  "homepage": "https://github.com/pitekcharles/goallist#readme"
+}

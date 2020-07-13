@@ -26,6 +26,27 @@ main {
 main button {
     width: 100px;
     margin: 20px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: white;
+}
+
+main #yesButton {
+    background-color: green;
+}
+
+main #noButton {
+    background-color: yellow;
+    color:black;
+}
+
+main #yesButton:focus {
+    background-color: blue;
+}
+
+main #noButton:focus {
+    background-color: blue;
+    color: white;
 }
 
 main .goalReached {
@@ -36,6 +57,14 @@ main .goalReached {
     padding: auto 0;
     border: 2px solid black;
     border-radius: 10px;
+}
+
+main .addGoal {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 70%;
+    margin: 10px auto;
+    padding-top: 30px;
 }
 
 /* footer styling */

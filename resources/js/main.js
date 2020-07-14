@@ -33,7 +33,7 @@ function goalStatus (status) {
     var reset = document.createElement("button");
     reset.innerText = "Reset";
     reset.setAttribute("type", "button");
-    reset.setAttribute("id", "reset");
+    reset.setAttribute("id", "resetButton");
     goalReached.appendChild(reset);
 }
 
@@ -44,3 +44,7 @@ yesButton.addEventListener("click", function () {
 noButton.addEventListener("click", function () {
     goalStatus(false);
 }, false);
+
+$(document).on("click", "#resetButton", function(){
+    console.log("bitches");
+});

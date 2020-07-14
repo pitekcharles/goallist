@@ -60,26 +60,24 @@ main #noButton:focus {
     color: white;
 }
 
-main .goalReached {
+main section {
     width: 70%;
-    margin: 0 auto;
-    padding-top: 30px;
-    /* height: 300px; */
+    margin: 10px auto;
+    padding-top: 10px;
     padding: auto 0;
     border: 2px solid black;
     border-radius: 10px;
     background-color: white;
 }
 
-main .addGoal {
+/* main .addGoal {
     border: 2px solid black;
     border-radius: 10px;
     width: 70%;
     margin: 10px auto;
     padding-top: 30px;
     background-color: white;
-    /* height: 100px; */
     padding: auto 0;
-}
+} */
 
 /* footer styling */

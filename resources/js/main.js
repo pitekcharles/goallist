@@ -32,6 +32,8 @@ function goalStatus (status) {
     noButton.remove();
     var reset = document.createElement("button");
     reset.innerText = "Reset";
+    reset.setAttribute("type", "button");
+    reset.setAttribute("id", "reset");
     goalReached.appendChild(reset);
 }
 

@@ -20,15 +20,19 @@ var noButton = document.getElementById("noButton");
 
 // function to replace goalachieved and goal failed
 function goalStatus (status) {
+    var goalReached = document.getElementById("goalReached")
     var h2 = document.createElement("h2");
     if (status === "reached") {
         h2.innerText = "Congratulations you achieved your goals today!";
     } else {
         h2.innerText = "You can do it! Tomorrow is another chance!";
     }
-    document.getElementById("goalReached").appendChild(h2);
+    goalReached.appendChild(h2);
     yesButton.remove();
     noButton.remove();
+    var reset = document.createElement("button");
+    reset.innerText = "Reset";
+    goalReached.appendChild(reset);
 }
 
 yesButton.addEventListener("click", function () {

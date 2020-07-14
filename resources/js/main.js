@@ -27,9 +27,10 @@ function goalStatus (status) {
     } else {
         h2.innerText = "You can do it! Tomorrow is another chance!";
     }
+    h2.setAttribute("id", "statusText");
     goalReached.appendChild(h2);
-    yesButton.remove();
-    noButton.remove();
+    document.getElementById("yesButton").remove();
+    document.getElementById("noButton").remove();
     var reset = document.createElement("button");
     reset.innerText = "Reset";
     reset.setAttribute("type", "button");
@@ -37,14 +38,40 @@ function goalStatus (status) {
     goalReached.appendChild(reset);
 }
 
-yesButton.addEventListener("click", function () {
-    goalStatus("reached");
-}, false);
+// function to work the reset button
+function resetClicked () {
+    var statusText = document.getElementById("statusText");
+    var reset = document.getElementById("resetButton");
+    statusText.remove();
+    var yesButton = document.createElement("button");
+    yesButton.setAttribute("type", "button");
+    yesButton.setAttribute("id", "yesButton");
+    yesButton.innerText = "Yes";
+    var noButton = document.createElement("button");
+    noButton.setAttribute("type", "button");
+    noButton.setAttribute("id", "noButton");
+    noButton.innerText = "No";
+    goalReached.appendChild(yesButton);
+    goalReached.appendChild(noButton);
+    reset.remove();
+}
 
-noButton.addEventListener("click", function () {
-    goalStatus(false);
-}, false);
+// yesButton.addEventListener("click", function () {
+//     goalStatus("reached");
+// }, false);
+
+// noButton.addEventListener("click", function () {
+//     goalStatus(false);
+// }, false);
 
 $(document).on("click", "#resetButton", function(){
-    console.log("bitches");
+    resetClicked();
+});
+
+$(document).on("click", "#yesButton", function(){
+    goalStatus("reached");
+});
+
+$(document).on("click", "#noButton", function(){
+    goalStatus(false);
 });

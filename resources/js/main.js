@@ -1,3 +1,6 @@
+// counters and the such
+var idCounter = 0; 
+
 // function to replace goalachieved and goal failed
 function goalStatus (status) {
     var goalReached = document.getElementById("goalReached")
@@ -44,13 +47,19 @@ function addGoal () {
     var newGoal = $("#newGoal").val();
     var test = document.getElementById("newGoal");
     test.value = "";
+    var li = document.createElement("li");
+    li.setAttribute("id", idCounter);
+    idCounter +=1;
     var goal = document.createElement("p");
     goal.setAttribute("id", newGoal);
     goal.innerText = newGoal;
     var goalList = document.getElementById("goalList");
     var completedButton = createButton("completedButton", "Completed");
-    goalList.appendChild(goal);
-    goalList.appendChild(completedButton);
+    var notCompleteButton = createButton("notCompleteButton", "Not Complete");
+    li.appendChild(goal);
+    li.appendChild(completedButton);
+    li.appendChild(notCompleteButton);
+    goalList.appendChild(li);
 }
 
 $(document).on("click", "#resetButton", function(){

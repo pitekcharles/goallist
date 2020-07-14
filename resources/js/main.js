@@ -36,6 +36,10 @@ function resetClicked () {
     reset.remove();
 }
 
+function addGoal () {
+
+}
+
 $(document).on("click", "#resetButton", function(){
     resetClicked();
 });
@@ -47,3 +51,7 @@ $(document).on("click", "#yesButton", function(){
 $(document).on("click", "#noButton", function(){
     goalStatus(false);
 });
+
+$(document).on("click", "#addGoal", function(){
+    console.log("testing");
+})

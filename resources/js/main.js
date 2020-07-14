@@ -37,7 +37,14 @@ function resetClicked () {
 }
 
 function addGoal () {
-    console.log("testing");
+    var newGoal = $("#newGoal").val();
+    var test = document.getElementById("newGoal");
+    test.value = "";
+    var goal = document.createElement("p");
+    goal.setAttribute("id", newGoal);
+    goal.innerText = newGoal;
+    var goalList = document.getElementById("goalList");
+    goalList.appendChild(goal);
 }
 
 $(document).on("click", "#resetButton", function(){

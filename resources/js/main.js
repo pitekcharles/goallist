@@ -1,26 +1,40 @@
 var yesButton = document.getElementById("yesButton");
 var noButton = document.getElementById("noButton");
 
-function goalAchieved () {
-    var h2 = document.createElement("h2");
-    h2.innerText = "Congratulations you achieved your goals today!";
-    document.getElementById("goalReached").appendChild(h2);
-    yesButton.remove();
-    noButton.remove();
-}
+// Old button functions, consolidated into one function
+// function goalAchieved () {
+//     var h2 = document.createElement("h2");
+//     h2.innerText = "Congratulations you achieved your goals today!";
+//     document.getElementById("goalReached").appendChild(h2);
+//     yesButton.remove();
+//     noButton.remove();
+// }
 
-function goalFailed () {
+// function goalFailed () {
+//     var h2 = document.createElement("h2");
+//     h2.innerText = "You can do it! Tomorrow is another chance!";
+//     document.getElementById("goalReached").appendChild(h2);
+//     yesButton.remove();
+//     noButton.remove();
+// }
+
+// function to replace goalachieved and goal failed
+function goalStatus (status) {
     var h2 = document.createElement("h2");
-    h2.innerText = "You can do it! Tomorrow is another chance!";
+    if (status === "reached") {
+        h2.innerText = "Congratulations you achieved your goals today!";
+    } else {
+        h2.innerText = "You can do it! Tomorrow is another chance!";
+    }
     document.getElementById("goalReached").appendChild(h2);
     yesButton.remove();
     noButton.remove();
 }
 
 yesButton.addEventListener("click", function () {
-    goalAchieved();
+    goalStatus("reached");
 }, false);
 
 noButton.addEventListener("click", function () {
-    goalFailed();
+    goalStatus(false);
 }, false);

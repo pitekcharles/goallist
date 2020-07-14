@@ -37,7 +37,7 @@ function resetClicked () {
 }
 
 function addGoal () {
-
+    console.log("testing");
 }
 
 $(document).on("click", "#resetButton", function(){
@@ -53,5 +53,5 @@ $(document).on("click", "#noButton", function(){
 });
 
 $(document).on("click", "#addGoal", function(){
-    console.log("testing");
+    addGoal();
 })

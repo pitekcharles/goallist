@@ -44,7 +44,12 @@ function addGoal () {
     goal.setAttribute("id", newGoal);
     goal.innerText = newGoal;
     var goalList = document.getElementById("goalList");
+    var completedButton = document.createElement("button");
+    completedButton.setAttribute("id", "completedButton");
+    completedButton.setAttribute("type", "button");
+    completedButton.innerText = "Completed";
     goalList.appendChild(goal);
+    goalList.appendChild(completedButton);
 }
 
 $(document).on("click", "#resetButton", function(){

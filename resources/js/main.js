@@ -1,23 +1,3 @@
-var yesButton = document.getElementById("yesButton");
-var noButton = document.getElementById("noButton");
-
-// Old button functions, consolidated into one function
-// function goalAchieved () {
-//     var h2 = document.createElement("h2");
-//     h2.innerText = "Congratulations you achieved your goals today!";
-//     document.getElementById("goalReached").appendChild(h2);
-//     yesButton.remove();
-//     noButton.remove();
-// }
-
-// function goalFailed () {
-//     var h2 = document.createElement("h2");
-//     h2.innerText = "You can do it! Tomorrow is another chance!";
-//     document.getElementById("goalReached").appendChild(h2);
-//     yesButton.remove();
-//     noButton.remove();
-// }
-
 // function to replace goalachieved and goal failed
 function goalStatus (status) {
     var goalReached = document.getElementById("goalReached")
@@ -55,14 +35,6 @@ function resetClicked () {
     goalReached.appendChild(noButton);
     reset.remove();
 }
-
-// yesButton.addEventListener("click", function () {
-//     goalStatus("reached");
-// }, false);
-
-// noButton.addEventListener("click", function () {
-//     goalStatus(false);
-// }, false);
 
 $(document).on("click", "#resetButton", function(){
     resetClicked();

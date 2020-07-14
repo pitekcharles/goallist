@@ -18,19 +18,23 @@ function goalStatus (status) {
     goalReached.appendChild(reset);
 }
 
+// since i seem to be doing it alot, here is a function to create buttons
+
+function createButton (id, innerText) {
+    var button = document.createElement("button");
+    button.setAttribute("id", id);
+    button.setAttribute("type", "button");
+    button.innerText = innerText;
+    return button;
+}
+
 // function to work the reset button
 function resetClicked () {
     var statusText = document.getElementById("statusText");
     var reset = document.getElementById("resetButton");
     statusText.remove();
-    var yesButton = document.createElement("button");
-    yesButton.setAttribute("type", "button");
-    yesButton.setAttribute("id", "yesButton");
-    yesButton.innerText = "Yes";
-    var noButton = document.createElement("button");
-    noButton.setAttribute("type", "button");
-    noButton.setAttribute("id", "noButton");
-    noButton.innerText = "No";
+    var yesButton = createButton("yesButton", "Yes");
+    var noButton = createButton("noButton", "No");
     goalReached.appendChild(yesButton);
     goalReached.appendChild(noButton);
     reset.remove();
@@ -44,10 +48,7 @@ function addGoal () {
     goal.setAttribute("id", newGoal);
     goal.innerText = newGoal;
     var goalList = document.getElementById("goalList");
-    var completedButton = document.createElement("button");
-    completedButton.setAttribute("id", "completedButton");
-    completedButton.setAttribute("type", "button");
-    completedButton.innerText = "Completed";
+    var completedButton = createButton("completedButton", "Completed");
     goalList.appendChild(goal);
     goalList.appendChild(completedButton);
 }
